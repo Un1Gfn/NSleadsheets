@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\include{preamble.tex}
+
+\begin{document}
+
+\newcounter{xoxrjv}
+\setcounter{xoxrjv}{0}
+
+\setleadsheets{verse/label-format = {Verse:}}
+
+SINACH
+
+Way Maker
+
+\bigskip
+\bigskip
+\bigskip
+
+\setcounter{xoxrjv}{-12}
+\loop
+
+  \hrule
+  \smallskip
+  \[\mathit{transpose} = (\ifnum\value{xoxrjv}<0\else+\fi\mathrm{\thexoxrjv}) * \mathit{simitone}\]
+
+  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=sharp]{key=E}
+    \input{1107291408.tex}
+  \end{song}
+  
+  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false]{key=E}
+    \input{1107291408.tex}
+  \end{song}
+  
+  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=flat]{key=E}
+    \input{1107291408.tex}
+  \end{song}
+
+  \bigskip
+  \bigskip
+  \bigskip
+
+\refstepcounter{xoxrjv}
+\ifnum\value{xoxrjv}<12\repeat
+
+\LaTeX
+
+\end{document}
