@@ -4,67 +4,70 @@
 
 \begin{document}
 
-\newcounter{xoxrjv}
-\setcounter{xoxrjv}{0}
+% \pagestyle{empty}
+% \fancyhead{}
+% \renewcommand{\headrulewidth}{0pt}
 
 % \setleadsheets{intro/name = {[Intro]}}
 % \setleadsheets{intro/named = false}
 % \setleadsheets{intro/label-format = {[Intro]}}
 % \setleadsheets{intro/after-label = {}}
-
 % \setleadsheets{verse/name = {[Verse]}}
 % \setleadsheets{verse/named = false}
 % \setleadsheets{verse/label-format = {[Verse]}}
 \setleadsheets{verse/after-label = {:}}
-
 % \setleadsheets{chorus/name = {[Chorus]}}
 % \setleadsheets{chorus/named = true}
+% \setleadsheets{chorus/label-format = {[Chorus]}}
 % \setleadsheets{chorus/after-label = {}}
-
 % \setleadsheets{bridge/name = {[Bridge]}}
 % \setleadsheets{bridge/named = true}
 % \setleadsheets{bridge/after-label = {}}
+\setleadsheets{transpose-capo=false}
 
-% \setleadsheets{chorus/label-format = {[Chorus]}}
+\label{lbtoc}
+\newcommand{\cursec}[0]{}
+\tableofcontents
+\pagebreak
 
-% \pagestyle{empty}
-% \fancyhead{}
-% \renewcommand{\headrulewidth}{0pt}
+\section{Placeholder}
+\section{Placeholder}
+\section{Placeholder}
 
-SINACH
+% \NSsong[NStranspose=0,NSenharmonic=sharp,NSinput=blank.tex,NSkey=C]{Placeholder Anonymous - Someone}
+% \NSsong[NStranspose=-3,NSenharmonic=sharp,NSinput=1107291408.tex,NSkey=A]{Way Maker Sinach - Enoch}
 
-Way Maker
-
-\bigskip
-
-\begin{song}[transpose=-3,transpose-capo=false,enharmonic=sharp]{key=A}
-  \input{1107291408.tex}
+\renewcommand{\cursec}[0]{Way Maker Sinach - Enoch}
+\section{\cursec}
+\backtotoc \quad \url{https://music.apple.com/us/song/1107291445}
+\begin{song}[transpose=-5,enharmonic=sharp]{key=G,title={\cursec{} - \writechord{C} major}}
+  \input{1107291445.tex}
 \end{song}
+\medskip
+\backtotoc
 \pagebreak
 
-\begin{song}[transpose=-2,transpose-capo=false,enharmonic=flat]{key=Bb}
-  \input{1107291408.tex}
+\section{Placeholder} \pagebreak
+\section{Placeholder} \pagebreak
+\section{Placeholder} \pagebreak
+
+\renewcommand{\cursec}[0]{Amazing Grace My Chains Are Gone Chris Tomlin - Billy}
+\section{\cursec}
+\backtotoc \quad \url{https://music.apple.com/us/song/1440842278}
+\begin{song}[transpose=0,enharmonic=sharp]{key=C,title={\cursec{} - \writechord{C} major}}
+  \input{1440842278.tex}
 \end{song}
+\medskip
+\backtotoc
 \pagebreak
 
-\begin{song}[transpose=0,transpose-capo=false,enharmonic=sharp]{key=C}
-  \input{1107291408.tex}
-\end{song}
-\pagebreak
-
-\begin{song}[transpose=+2,transpose-capo=false,enharmonic=sharp]{key=D}
-  \input{1107291408.tex}
-\end{song}
-\pagebreak
-
-\begin{song}[transpose=+4,transpose-capo=false,enharmonic=sharp]{key=E}
-    \input{1107291408.tex}
-  \end{song}
-\pagebreak
-
-\LaTeX
+\section{Placeholder} \pagebreak
+\section{Placeholder} \pagebreak
 
 \end{document}
+
+% \newcounter{xoxrjv}
+% \setcounter{xoxrjv}{0}
 
 % \setcounter{xoxrjv}{-12}
 % \loop

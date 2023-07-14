@@ -1,4 +1,9 @@
+
+# /*.tmp
+
 /*.aux
 /*.log
+/*.toc
+/*.out
+
 /*.pdf
-# /*.tmp
