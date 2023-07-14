@@ -15,7 +15,25 @@
 \setlength{\parindent}{0pt}
 
 \usepackage[full]{leadsheets}
-\useleadsheetslibrary{musejazz}
+% \useleadsheetslibrary{musejazz}
+
+\newenvironment{NStag}[0]{
+  \begin{verse}[label-format={Tag:}]
+}{
+  \end{verse}
+}
+
+\newenvironment{instrumental}[0]{
+  \begin{verse}[label-format={Instrumental}]
+}{
+  \end{verse}
+}
+
+\newenvironment{turnaround}[0]{
+  \begin{verse}[label-format={Turnaround}]
+}{
+  \end{verse}
+}
 
 \newenvironment{refrain}[0]{
   \begin{verse}[label-format={Refrain}]
@@ -37,7 +55,7 @@
 }
 
 % Use the undocumented {outro} environment instead
-% \newenvironment{outroo}[0]{
+% \newenvironment{NSoutro}[0]{
 %   \begin{verse}[label-format={Outro}]
 % }{
 %   \end{verse}
@@ -57,11 +75,11 @@
     % urlcolor=black
 }
 
-% USAGE \NSsongC{#1_TRANSPOSE_OFFSET}{#2_KEY}{#3_ENHARMONIC}{#4_APPLEMUSIC_ID}{#5_LONG_TITLE}
-\newcommand{\NSsongC}[5]{
-  \section{#5}
+% USAGE \NSsongC{#1_TRANSPOSE_OFFSET}{#2_KEY_FORCEMAJ}{#3_ENHARMONIC}{#4_APPLEMUSIC_ID}{#5_TXT_TITLE}{#6_TXT_ARTIST}{7_TXT_LEAD}{8_TXT_KEY_MAJMIN}
+\newcommand{\NSsongC}[8]{
+  \section{#8 - #7 - #5 #6}
   \backtotoc \quad \url{https://music.apple.com/us/song/#4}
-  \begin{song}[transpose=#1,enharmonic=#3]{key=#2,title={#5 - \writechord{C} major}}
+  \begin{song}[transpose=#1,enharmonic=#3]{key=#2,title={}}
     \input{#4.tex}
   \end{song}
   \medskip
