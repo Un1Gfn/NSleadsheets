@@ -1,12 +1,14 @@
 \usepackage[
   a4paper,
   portrait,
-  % hmargin=0.2in,
-  % vmargin=0.2in,
-  % showframe,
+  hmargin=15mm,
+  vmargin=15mm,
+  showframe,
 ]{geometry}
 
-\usepackage[stamp=true,text={D E M O},scale=1.0,colorspec=0.95]{draftwatermark}
+% \usepackage{fancyhdr}
+
+\usepackage[stamp=true,text={S A M P L E},scale=.7,colorspec=.95]{draftwatermark}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -24,3 +26,32 @@
 % \usepackage{listofitems}
 
 \usepackage{pgffor}
+
+\newenvironment{refrain}[0]{
+  \begin{verse}[label-format={Refrain}]
+}{
+  \end{verse}
+}
+
+\newenvironment{together}[0]{
+  \begin{verse}[label-format={Together}]
+}{
+  \end{verse}
+}
+
+% Outro is defined but undocumented
+\newenvironment{outroo}[0]{
+  \begin{verse}[label-format={Outro}]
+}{
+  \end{verse}
+}
+
+\newenvironment{acappella}[0]{
+  \begin{verse}[label-format={a cappella}]
+    (voices only / without instruments) \\
+}{
+  \end{verse}
+}
+
+
+

@@ -7,41 +7,90 @@
 \newcounter{xoxrjv}
 \setcounter{xoxrjv}{0}
 
-\setleadsheets{verse/label-format = {Verse:}}
+% \setleadsheets{intro/name = {[Intro]}}
+% \setleadsheets{intro/named = false}
+% \setleadsheets{intro/label-format = {[Intro]}}
+% \setleadsheets{intro/after-label = {}}
+
+% \setleadsheets{verse/name = {[Verse]}}
+% \setleadsheets{verse/named = false}
+% \setleadsheets{verse/label-format = {[Verse]}}
+\setleadsheets{verse/after-label = {:}}
+
+% \setleadsheets{chorus/name = {[Chorus]}}
+% \setleadsheets{chorus/named = true}
+% \setleadsheets{chorus/after-label = {}}
+
+% \setleadsheets{bridge/name = {[Bridge]}}
+% \setleadsheets{bridge/named = true}
+% \setleadsheets{bridge/after-label = {}}
+
+% \setleadsheets{chorus/label-format = {[Chorus]}}
+
+% \pagestyle{empty}
+% \fancyhead{}
+% \renewcommand{\headrulewidth}{0pt}
 
 SINACH
 
 Way Maker
 
 \bigskip
-\bigskip
-\bigskip
 
-\setcounter{xoxrjv}{-12}
-\loop
+\begin{song}[transpose=-3,transpose-capo=false,enharmonic=sharp]{key=A}
+  \input{1107291408.tex}
+\end{song}
+\pagebreak
 
-  \hrule
-  \smallskip
-  \[\mathit{transpose} = (\ifnum\value{xoxrjv}<0\else+\fi\mathrm{\thexoxrjv}) * \mathit{simitone}\]
+\begin{song}[transpose=-2,transpose-capo=false,enharmonic=flat]{key=Bb}
+  \input{1107291408.tex}
+\end{song}
+\pagebreak
 
-  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=sharp]{key=E}
+\begin{song}[transpose=0,transpose-capo=false,enharmonic=sharp]{key=C}
+  \input{1107291408.tex}
+\end{song}
+\pagebreak
+
+\begin{song}[transpose=+2,transpose-capo=false,enharmonic=sharp]{key=D}
+  \input{1107291408.tex}
+\end{song}
+\pagebreak
+
+\begin{song}[transpose=+4,transpose-capo=false,enharmonic=sharp]{key=E}
     \input{1107291408.tex}
   \end{song}
+\pagebreak
+
+\LaTeX
+
+\end{document}
+
+% \setcounter{xoxrjv}{-12}
+% \loop
+
+%   \hrule
+%   \smallskip
+%   \[\mathit{transpose} = (\ifnum\value{xoxrjv}<0\else+\fi\mathrm{\thexoxrjv}) * \mathit{simitone}\]
+
+%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=sharp]{key=E}
+%     \input{1107291408.tex}
+%   \end{song}
   
-  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false]{key=E}
-    \input{1107291408.tex}
-  \end{song}
+%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false]{key=E}
+%     \input{1107291408.tex}
+%   \end{song}
   
-  \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=flat]{key=E}
-    \input{1107291408.tex}
-  \end{song}
+%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=flat]{key=E}
+%     \input{1107291408.tex}
+%   \end{song}
 
-  \bigskip
-  \bigskip
-  \bigskip
+%   \bigskip
+%   \bigskip
+%   \bigskip
 
-\refstepcounter{xoxrjv}
-\ifnum\value{xoxrjv}<12\repeat
+% \refstepcounter{xoxrjv}
+% \ifnum\value{xoxrjv}<12\repeat
 
 \LaTeX
 
