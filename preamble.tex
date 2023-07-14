@@ -6,26 +6,16 @@
   % showframe,
 ]{geometry}
 
-% \usepackage{fancyhdr}
-
 \usepackage[stamp=true,text={D R A F T},scale=1.01,colorspec=.95]{draftwatermark}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-% \usepackage{multicol}
-
 % \usepackage{parskip}
 \setlength{\parindent}{0pt}
 
-% \usepackage[chordbk]{songbook}
-% \usepackage[chorded]{songs}
 \usepackage[full]{leadsheets}
 \useleadsheetslibrary{musejazz}
-
-% \usepackage{listofitems}
-
-% \usepackage{pgffor}
 
 \newenvironment{refrain}[0]{
   \begin{verse}[label-format={Refrain}]
@@ -39,24 +29,24 @@
   \end{verse}
 }
 
-% Outro is defined but undocumented
-\newenvironment{outroo}[0]{
-  \begin{verse}[label-format={Outro}]
-}{
-  \end{verse}
-}
-
 \newenvironment{acappella}[0]{
-  \begin{verse}[label-format={a cappella}]
+  \begin{verse}[label-format={A cappella}]
     (voices only / without instruments) \\
 }{
   \end{verse}
 }
 
-\usepackage{nameref}
+% Use the undocumented {outro} environment instead
+% \newenvironment{outroo}[0]{
+%   \begin{verse}[label-format={Outro}]
+% }{
+%   \end{verse}
+% }
 
 \usepackage{color}
+\usepackage{nameref}
 \usepackage{hyperref}
+
 \newcommand{\backtotoc}[0]{\hyperref[lbtoc]{back to TOC}}
 \hypersetup{
     colorlinks=true,
@@ -67,6 +57,19 @@
     % urlcolor=black
 }
 
+% USAGE \NSsongC{#1_TRANSPOSE_OFFSET}{#2_KEY}{#3_ENHARMONIC}{#4_APPLEMUSIC_ID}{#5_LONG_TITLE}
+\newcommand{\NSsongC}[5]{
+  \section{#5}
+  \backtotoc \quad \url{https://music.apple.com/us/song/#4}
+  \begin{song}[transpose=#1,enharmonic=#3]{key=#2,title={#5 - \writechord{C} major}}
+    \input{#4.tex}
+  \end{song}
+  \medskip
+  \backtotoc
+  \pagebreak
+}
+
 \usepackage{datetime}
+% \usepackage{fancyhdr}
 
 \usepackage{progressbar}

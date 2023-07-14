@@ -25,14 +25,9 @@
 % \setleadsheets{bridge/after-label = {}}
 \setleadsheets{transpose-capo=false}
 
-
 \progressbar[width=\textwidth]{0.2}\par
 {\ttfamily typesetting progress} \par
 \bigskip
-
-% \progressbar[width=textwidth]{0.2}
-
-% \progressbar[width=5cm,heightr=1,filledcolor=red,emptycolor=blue!30]{0.75}
 
 \label{lbtoc}
 \newcommand{\cursec}[0]{}
@@ -48,51 +43,26 @@ Tips:
   \item Browse Apple music to get song id. \\ \url{https://music.apple.com/us/browse}
 \end{itemize}
 \hrule
-
 \pagebreak
 
 \section{Placeholder} \pagebreak
-\section{Placeholder} \pagebreak
-\section{Placeholder} \pagebreak
 
-% \NSsong[NStranspose=0,NSenharmonic=sharp,NSinput=blank.tex,NSkey=C]{Placeholder Anonymous - Someone}
-% \NSsong[NStranspose=-3,NSenharmonic=sharp,NSinput=1107291408.tex,NSkey=A]{Way Maker Sinach - Enoch}
-
-% \renewcommand{\cursec}[0]{Way Maker Sinach - Enoch}
-% \section{\cursec}
-% \backtotoc \quad \url{https://music.apple.com/us/song/1107291445}
-% \begin{song}[transpose=+4,enharmonic=sharp]{key=E,title={\cursec{} - \writechord{C} major}}
-%   \input{1107291445.tex}
-% \end{song}
-% \medskip
-% \backtotoc
-% \pagebreak
-
-\newcommand{\NSsongC}[5]{
-  \section{#5}
-  \begin{song}[transpose=#1,enharmonic=#3]{key=#2,title={\writechord{C} major}}
-    \input{#4.tex}
-  \end{song}
-}
-
-\NSsongC{0}{C}{sharp}{1107291445}{Way Maker Sinach - Enoch}
-
-\section{Placeholder} \pagebreak
-\section{Placeholder} \pagebreak
 \section{Placeholder} \pagebreak
 
 \section{Placeholder} \pagebreak
-% \renewcommand{\cursec}[0]{Amazing Grace My Chains Are Gone Chris Tomlin - Billy}
-% \section{\cursec}
-% \backtotoc \quad \url{https://music.apple.com/us/song/1440842278}
-% \begin{song}[transpose=-3,enharmonic=sharp]{key=A,title={\cursec{} - \writechord{C} major}}
-%   \input{1440842278.tex}
-% \end{song}
-% \medskip
-% \backtotoc
-% \pagebreak
+
+\NSsongC{+4}{E}{sharp}{1107291445}{Way Maker Sinach - Enoch}
 
 \section{Placeholder} \pagebreak
+
+\section{Placeholder} \pagebreak
+
+\section{Placeholder} \pagebreak
+
+\NSsongC{-3}{A}{sharp}{1440842278}{Amazing Grace My Chains Are Gone Chris Tomlin - Billy}
+
+\section{Placeholder} \pagebreak
+
 \section{Placeholder} \pagebreak
 
 \end{document}
