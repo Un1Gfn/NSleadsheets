@@ -13,6 +13,7 @@ pdf:
 # TOC requires incremental build
 #	gls -A1 *.tex | entr sh -c 'clear; printf \\e\[3J $(MAKE) clean; $(MAKE) pdf'
 entr:
+	$(MAKE) clean
 	gls -A1 *.tex | entr $(MAKE) pdf
 
 view:
