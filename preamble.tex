@@ -84,16 +84,42 @@
 % USAGE \NSsongC{#1_TRANSPOSE_OFFSET}{#2_KEY_FORCEMAJ}{#3_ENHARMONIC}{#4_APPLEMUSIC_ID}{#5_TXT_TITLE}{#6_TXT_ARTIST}{7_TXT_LEAD}{8_TXT_KEY_MAJMIN}
 \newcommand{\NSsongC}[8]{
   \section{#8 - #7 - #5 - #6}
-  \backtotoc \quad \url{https://music.apple.com/us/song/#4}
+  \backtotoc \quad \url{https://music.apple.com/us/song/#4} \par
+  \url{file:///Users/darren/bible.NSleadsheets/#4.tex}
   \begin{song}[transpose=#1,enharmonic=#3]{key=#2,title={}}
     \input{#4.tex}
   \end{song}
   \medskip
   \backtotoc
-  \pagebreak
+  % \clearpage
+}
+
+\newcommand{\NSsongAll}[8]{
+  \NSsongC{+00}{C  }{sharp}{#4}{#5}{#6}{#7}{C }
+  \NSsongC{+01}{Db }{flat }{#4}{#5}{#6}{#7}{Db}
+  \NSsongC{+02}{D  }{sharp}{#4}{#5}{#6}{#7}{D }
+  \NSsongC{+03}{Eb }{flat }{#4}{#5}{#6}{#7}{Eb}
+  \NSsongC{+04}{E  }{sharp}{#4}{#5}{#6}{#7}{E }
+  \NSsongC{+05}{F  }{flat }{#4}{#5}{#6}{#7}{F }
+  \NSsongC{+06}{F\#}{sharp}{#4}{#5}{#6}{#7}{F\#}
+  \NSsongC{+07}{G  }{sharp}{#4}{#5}{#6}{#7}{G }
+  \NSsongC{+08}{Ab }{flat }{#4}{#5}{#6}{#7}{Ab}
+  \NSsongC{+09}{A  }{sharp}{#4}{#5}{#6}{#7}{A }
+  \NSsongC{+10}{Bb }{flat }{#4}{#5}{#6}{#7}{Bb}
+  \NSsongC{+11}{B  }{sharp}{#4}{#5}{#6}{#7}{B }
 }
 
 \usepackage{datetime}
 % \usepackage{fancyhdr}
 
 \usepackage{progressbar}
+
+\usepackage{xcolor}
+% \pagecolor{black!95}
+% \color{lightgray}
+
+\newcommand{\youtube}[1]{
+  \url{https://youtu.be/#1}
+}
+
+\usepackage{qrcode}

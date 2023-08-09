@@ -2,6 +2,9 @@
 
 \include{preamble.tex}
 
+% https://tex.stackexchange.com/a/483040/
+\special{dvipdfmx:config z 0}
+
 \begin{document}
 
 % \pagestyle{empty}
@@ -22,7 +25,7 @@
 % \setleadsheets{verse/named = false}
 % \setleadsheets{verse/label-format = {[Verse]}}
 \setleadsheets{verse/after-label = {:}}
-% \setleadsheets{verse/format={\sffamily}}
+\setleadsheets{verse/format={\sffamily}}
 % \setleadsheets{chorus/name = {[Chorus]}}
 % \setleadsheets{chorus/named = true}
 % \setleadsheets{chorus/label-format = {[Chorus]}}
@@ -33,9 +36,9 @@
 % \setleadsheets{bridge/after-label = {}}
 % \setleadsheets{bridge/format={\sffamily}}
 
-\progressbar[width=\textwidth]{0.30}\par
-{\ttfamily typesetting progress} \par
-\bigskip
+% \progressbar[width=\textwidth]{0.30}\par
+% {\ttfamily typesetting progress} \par
+% \bigskip
 
 \label{lbtoc}
 \newcommand{\cursec}[0]{}
@@ -43,58 +46,44 @@
 \bigskip
 \hrule
 \bigskip
-Tips:
+P.S.
 \begin{itemize}
-  \item Transposing is trivial work. \\ It takes less than 30 seconds to change the key of a song. \\ Feel free to request a transpose.
+  \item Transposing is trivial work. \\ Feel free to request a transpose.
   \item This PDF file is generated at \textbraceleft{} \currenttime{} \textbraceright{} on \textbraceleft{} \today{} \textbraceright{}.
   \item Package \textit{leadsheets} documented at: \\ \url{http://mirrors.ctan.org/macros/latex/contrib/leadsheets/leadsheets_en.pdf}
-  \item Browse Apple music to get song id. \\ \url{https://music.apple.com/us/browse}
+  \item Browse Apple music to get song id. \\ \url{https://music.apple.com/us/browse} \\ \url{https://music.apple.com/us/song/NNN}
+  \item SpotifyRip. \\ \url{https://doubledouble.top/}
 \end{itemize}
 \hrule
-\pagebreak
+% \clearpage
 
-\NSsongC{+2}{D}{sharp}{1556948287}{House Of The Lord}{Phil Wickham}{Hilda}{D maj}
-% \NSsongC{}{}{}{}{Trading My Sorrow}{}{Enoch}{(will be G maj once construction complete)}
-% \NSsongC{}{}{}{}{You Are Good}{}{Enoch}{(will be E maj once construction complete)}
-\NSsongC{+2}{D}{sharp}{1107291445}{Way Maker}{Sinach}{Enoch}{D maj}
-\NSsongC{-5}{G}{sharp}{1150732526}{Do It Again}{Elevation Worship}{Jeison}{G maj}
-% \NSsongC{}{}{}{}{Worthy Is The Lamb}{}{Josiah}{(will be A maj once construction complete)}
-% \NSsongC{}{}{}{}{There Is None Like You}{}{Enoch \& Hilda}{(will be A maj once construction complete)}
-\NSsongC{-3}{A}{sharp}{1440842278}{Amazing Grace My Chains Are Gone}{Chris Tomlin}{Billy}{A maj}
-% \NSsongC{}{}{}{}{Good Good Father}{}{Josiah}{(will be A maj once construction complete)}
-% \NSsongC{}{}{}{}{The Blessing}{}{Pasmal}{(will be B maj once construction complete)}
-
-\end{document}
-
-% \newcounter{xoxrjv}
-% \setcounter{xoxrjv}{0}
-
-% \setcounter{xoxrjv}{-12}
-% \loop
-
-%   \hrule
-%   \smallskip
-%   \[\mathit{transpose} = (\ifnum\value{xoxrjv}<0\else+\fi\mathrm{\thexoxrjv}) * \mathit{simitone}\]
-
-%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=sharp]{key=E}
-%     \input{1107291408.tex}
-%   \end{song}
+\newcommand{\hfbrly}[0]{
+  \part{hfbrly}
+  \NSsongC{+2}{D}{sharp}{1556948287}{House Of The Lord}{Phil Wickham}{Hilda}{D}
+  \NSsongC{+2}{D}{sharp}{1107291445}{Way Maker}{Sinach}{Enoch}{D}
+  \NSsongC{-5}{G}{sharp}{1150732526}{Do It Again}{Elevation Worship}{Jeison}{G}
+  \NSsongC{-3}{A}{sharp}{1440842278}{Amazing Grace My Chains Are Gone}{Chris Tomlin}{Billy}{A}
+}
   
-%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false]{key=E}
-%     \input{1107291408.tex}
-%   \end{song}
+\newcommand{\acegxa}[0]{
+  \part{acegxa}
+  \NSsongAll{}{}{}{1440831760}{O Praise The Name Anástasis}{Hillsong Worship}{}{}
+  \NSsongAll{}{}{}{715484828}{In Christ Alone}{Keith Getty and Stuart Townend}{}{}
+}
   
-%   \begin{song}[transpose=\value{xoxrjv},transpose-capo=false,enharmonic=flat]{key=E}
-%     \input{1107291408.tex}
-%   \end{song}
+% \newcommand{\UnderConstruction}[0]{
+%   \part{UnderConstruction}
+% }
 
-%   \bigskip
-%   \bigskip
-%   \bigskip
+\hfbrly
 
-% \refstepcounter{xoxrjv}
-% \ifnum\value{xoxrjv}<12\repeat
+\acegxa
 
-\LaTeX
+% \UnderConstruction
+
+\clearpage
+\url{https://github.com/Un1Gfn/NSleadsheets}
+\bigskip
+\qrcode{https://github.com/Un1Gfn/NSleadsheets}
 
 \end{document}

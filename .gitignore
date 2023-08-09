@@ -7,3 +7,9 @@
 /*.out
 
 /*.pdf
+
+/media
+
+/.DS_Store
+
+/tgbot.apitoken
