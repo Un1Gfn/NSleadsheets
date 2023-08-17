@@ -1,5 +1,9 @@
 
-# /*.tmp
+
+.DS_Store
+
+# /latex.old/tgbot.chatid symlinked to "../tgbot.chatid"
+tgbot.chatid
 
 /latex.old/*.aux
 /latex.old/*.log
@@ -8,9 +12,8 @@
 
 /latex.old/*.pdf
 
+# /*.tmp
+
 /media
-
-.DS_Store
-
-# /latex.old/tgbot.chatid symlinked to "../tgbot.chatid"
-tgbot.chatid
+/*.chordpro.pdf
+/*.zip

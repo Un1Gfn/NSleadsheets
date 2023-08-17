@@ -1,0 +1,42 @@
+
+# syntax
+# https://www.chordpro.org/chordpro/chordpro-configuration-overview/
+# https://github.com/sciurius/perl-Data-Properties
+
+# font backend
+# https://www.chordpro.org/chordpro/chordpro-fonts/
+
+# pdf
+# https://www.chordpro.org/chordpro/chordpro-configuration-pdf/#page-margins
+
+pdf {
+
+  # papersize = "a4portrait"
+  papersize = [ 842 595 ]
+
+  margintop    = 40
+  headspace    = 30
+
+  marginbottom = 40
+  footspace    = 20
+
+  marginleft   = 10
+  marginright  = 10
+
+  fonts {
+    text.file = "/Users/darren/Library/Fonts/DejaVuSans.ttf"
+    text.size = 12
+    chord.file = "/Users/darren/Library/Fonts/MuseJazzText.otf"
+    chord.size = 14
+  }
+
+  # for i in 0.7 0.8 0.9 1.0 1.3 1.5 1.7 2.0 3.0; do echo -n $i\ ; bc <<<"scale=7; $i*1.618"; done
+
+  spacing {
+    chords = 1.618
+    lyrics = 1.618
+    empty  = 3.236
+  }
+
+}
+
