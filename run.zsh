@@ -1,30 +1,51 @@
-#!/bin/zsh
+#!/bin/zsh -x
 
-CPO_CMD=(
-  /opt/homebrew/opt/perl/bin/chordpro
-  --config=chordpro.prp
-  --diagrams=none
-)
-
-# cpo_transpose_one $1=ID $2=KEY $3=SEMITONE
-cpo_transpose_one() {
-  ${CPO_CMD[@]} -x $3 -o $1-$2.chordpro.pdf $1.cho
+# cpo_transpose_one_key $1=ID $2=KEY $3=SEMITONE
+cpo_transpose_one_key() {
+  CPO_CMD=(
+    /opt/homebrew/opt/perl/bin/chordpro
+    --config=conf.prp
+    --config=$1.prp
+    --diagrams=none
+    -x $3
+    -o $1-$2.chordpro.pdf
+    $1.cho
+  )
+  # if [ -e $1.prp ]; then
+  #   CPO_CMD+=(--config=$1.prp)
+  # fi
+  ${CPO_CMD[@]}
 }
 
-cpo_transpose_all() {
-  cpo_transpose_one $1 Fi  '+6' # 🔼 SHARP +7
-  cpo_transpose_one $1 B_ '+11' # 🔼 SHARP +7
-  cpo_transpose_one $1 E_  '+4' # 🔼 SHARP +7
-  cpo_transpose_one $1 A_  '+9' # 🔼 SHARP +7
-  cpo_transpose_one $1 D_  '+2' # 🔼 SHARP +7
-  cpo_transpose_one $1 G_  '+7' # 🔼 SHARP +7
-  cpo_transpose_one $1 C_   '0'
-  cpo_transpose_one $1 F_  '-7' # 🔽 FLAT -7
-  cpo_transpose_one $1 Bb  '-2' # 🔽 FLAT -7
-  cpo_transpose_one $1 Eb  '-9' # 🔽 FLAT -7
-  cpo_transpose_one $1 Ab  '-4' # 🔽 FLAT -7
-  cpo_transpose_one $1 Db '-11' # 🔽 FLAT -7
-  cpo_transpose_one $1 Gb  '-6' # 🔽 FLAT -7
+# https://en.wikipedia.org/wiki/Circle_of_fifths
+# cpo_transpose_all $1=ID
+cpo_transpose_all_keys() {
+  cpo_transpose_one_key $1 Fi  '+6' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 B_ '+11' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 E_  '+4' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 A_  '+9' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 D_  '+2' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 G_  '+7' # 🔼 SHARP +7
+  cpo_transpose_one_key $1 C_   '0'
+  cpo_transpose_one_key $1 F_  '-7' # 🔽 FLAT -7
+  cpo_transpose_one_key $1 Bb  '-2' # 🔽 FLAT -7
+  cpo_transpose_one_key $1 Eb  '-9' # 🔽 FLAT -7
+  cpo_transpose_one_key $1 Ab  '-4' # 🔽 FLAT -7
+  cpo_transpose_one_key $1 Db '-11' # 🔽 FLAT -7
+  cpo_transpose_one_key $1 Gb  '-6' # 🔽 FLAT -7
 }
 
-cpo_transpose_all 715720012
+cpo_ckey_one_song() {
+  cpo_transpose_one_key $1 C_ '0'
+}
+
+cpo_ckey_all_songs() {
+  for i in *.cho; do
+    cpo_ckey_one_song ${i:r}
+  done
+}
+
+# cpo_ckey_one_song 715720012
+# cpo_ckey_one_song 1443158231
+
+cpo_ckey_all_songs

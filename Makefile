@@ -43,6 +43,7 @@ default:
 	$(MAKE) clean
 	$(MAKE) pdf
 	$(MAKE) zip
+	# $(MAKE) view
 
 info:
 	@echo
@@ -70,7 +71,8 @@ pdf:
 	./run.zsh
 
 view:
-	open *.pdf
+	# open *.pdf
+	open *-C_.chordpro.pdf
 
 zip:
 	grm -fv chordpro.zip
