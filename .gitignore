@@ -1,15 +1,16 @@
 
 # /*.tmp
 
-/*.aux
-/*.log
-/*.toc
-/*.out
+/latex.old/*.aux
+/latex.old/*.log
+/latex.old/*.out
+/latex.old/*.toc
 
-/*.pdf
+/latex.old/*.pdf
 
 /media
 
-/.DS_Store
+.DS_Store
 
-/tgbot.chatid
+# /latex.old/tgbot.chatid symlinked to "../tgbot.chatid"
+tgbot.chatid
