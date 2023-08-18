@@ -1,46 +1,47 @@
 {new_song}
-{columns: 3}
-{title: Amazing Grace My Chains Are Gone - https://www.worshiptogether.com/songs/amazing-grace-my-chains-are-gone/}
+{title: Amazing Grace My Chains Are Gone}
+{subtitle: https://www.worshiptogether.com/songs/amazing-grace-my-chains-are-gone/}
 {album: See the Morning}
 {artist: Chris Tomlin}
+{columns: 3}
 
 {start_of_verse: Verse 1}
-[G]Amazing Grace, how [C/G]sweet the [G]sound
-That saved a wretch like [D/G]me
-I [G]once was [G/B]lost but [C]now am [G]found
-Was blind but [D/G]now I [G]see
+[C]Amazing Grace, how [F/C]sweet the [C]sound
+That saved a wretch like [G/C]me
+I [C]once was [C/E]lost but [F]now am [C]found 
+Was blind but [G/C]now I [C]see
 {end_of_verse}
 
 {start_of_verse: Verse 2}
-[G]'Twas Grace that taught my [C/G]heart to [G]fear
-And Grace my fears re - [D/G]lieved
-How [G]precious [G/B]did that [C]Grace [G]appear
-The hour I [D/G]first be[G]lieved
+[C]'Twas Grace that taught my [F/C]heart to [C]fear
+And Grace my fears re-[G/C]lieved
+How [C]precious [C/E]did that [F]Grace [C]appear
+The hour I [G/C]first be[C]lieved
 {end_of_verse}
 
 {column_break}
 
 {start_of_chorus}
-My [G/B]chains are [C]gone, I've been set [G/B]free
-My God, my [C/E]Savior has ransomed [G/D]me
-And [G/B]like a [C]flood His mercy [G/B]rains
-Unending [Am7]love,[D7] Amazing [G]Grace
+My [C/E]chains are [F]gone, I've been set [C/E]free
+My God, my [F/A]Savior has ransomed [C/G]me
+And [C/E]like a [F]flood His mercy [C/E]rains
+Unending [Dm7]love,[G7] Amazing [C]Grace
 {end_of_chorus}
 
 {column_break}
 
 {start_of_verse: Verse 3}
-[G]The Lord has promised [C/G]good to [G]me
-His word my hope [D/G]secures
-He [G]will [G/B]my shield and [C]portion [G]be
-As [D/G]long as life [G]endures
+[C]The Lord has promised [F/C]good to [C]me
+His word my hope [G/C]secures
+He [C]will [C/E]my shield and [F]portion [C]be
+As [G/C]long as life [C]endures
 {end_of_verse}
 
 {start_of_verse: Verse 4}
-[C/G]The [G]earth shall soon [C/G]dissolve like [G]snow
-The sun forbear to [D/G]shine
-But [G]God who [G/B]called me [C]here [G]below
-Will [D/G]be forever [G]mine
-Will [D/G]be forever [G]mine
-You are [D/G]forever [G]mine
+[F/C]The [C]earth shall soon [F/C]dissolve like [C]snow
+The sun forbear to [G/C]shine
+But [C]God who [C/E]called me [F]here [C]below
+Will [G/C]be forever [C]mine
+Will [G/C]be forever [C]mine
+You are [G/C]forever [C]mine
 {end_of_verse}

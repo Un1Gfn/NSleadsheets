@@ -15,8 +15,10 @@ tgbot.chatid
 # /*.tmp
 
 /media
-/*.chordpro.pdf
 /*.zip
+
+/out/*
+!/out/.gitkeep
 
 /link_to_default_chordpro_json
 

@@ -57,7 +57,7 @@ info:
 	@echo
 
 clean:
-	grm -fv *.chordpro.pdf chordpro.zip
+	grm -fv out/*
 
 a2crd:
 	$(CHORDPRO) --a2crd tmp.txt
@@ -66,15 +66,17 @@ entr:
 	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) clean; $(MAKE) pdf'
 
 pdf:
-	./run.zsh
+	@echo
+	@./run.zsh
+	@echo
 
 view:
 	open *.pdf
 	# open *-C_.chordpro.pdf
 
-zip:
-	grm -fv chordpro.zip
-	zip -0 -X chordpro.zip *.chordpro.pdf
+# zip:
+# 	grm -fv chordpro.zip
+# 	zip -0 -X chordpro.zip *.chordpro.pdf
 
 share:
 	T=/tmp/chordpro-$$(gdate +%s).zip; \
@@ -84,7 +86,7 @@ share:
 	grm -v $$T
 
 list:
-	ggrep --color=auto -nri title *.cho
+	ggrep --color=auto -nri -e subtitle -e title *.cho
 
 status:
 	@echo
