@@ -1,20 +1,25 @@
+# preset themes 👍
+# https://www.chordpro.org/chordpro/chordpro-configuration-presets/
 
 # syntax
-# https://www.chordpro.org/chordpro/chordpro-configuration-overview/
+# https://www.chordpro.org/chordpro/chordpro-configuration/
 # https://github.com/sciurius/perl-Data-Properties
 
 # font backend
 # https://www.chordpro.org/chordpro/chordpro-fonts/
 
-# pdf
-# https://www.chordpro.org/chordpro/chordpro-configuration-pdf/#page-margins
+dates.today.format = "%a %e %b %Y %T %Z"
+
+# override!
+# settings.columns = 2
 
 pdf {
 
   # PAPERSIZE = [ WIDTH HEIGHT ]
   # /opt/homebrew/bin/gunits 'mm(297)' points # gives 841.88976
   # https://www.prepressure.com/library/paper-size/din-a3
-  papersize = [ 842 595 ]
+  papersize = a4
+  # papersize = [ 842 595 ]
   # margintop    = 40
   # headspace    = 30
   # marginbottom = 40
@@ -22,10 +27,20 @@ pdf {
   # marginleft   = 10
   # marginright  = 10
 
+  formats {
+    default {
+      footer = [ "%{title}" "%{today}" "page%{page}" ]
+    }
+    title {
+      title = [ "%{tempo} bps" "%{title}" "" ]
+      subtitle = [ "" "%{subtitle}" "" ]
+    }
+  }
+
   fonts {
     # overriden in individual prps
-    text.size = 3
-    chord.size = 5
+    # text.size = 3
+    # chord.size = 5
     text.file = "/Users/darren/Library/Fonts/DejaVuSans.ttf"
     chord.file = "/Users/darren/Library/Fonts/MuseJazzText.otf"
   }
@@ -46,7 +61,6 @@ pdf {
   # 2.0 3.2360
   # 2.5 4.0450
   # 3.0 4.8540
-
   spacing {
     chords = 1.618
     lyrics = 1.618
@@ -54,4 +68,3 @@ pdf {
   }
 
 }
-

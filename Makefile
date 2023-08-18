@@ -42,7 +42,7 @@ MAKEFLAGS:=-j1
 default:
 	$(MAKE) clean
 	$(MAKE) pdf
-	$(MAKE) zip
+	# $(MAKE) zip
 	# $(MAKE) view
 
 info:
@@ -52,8 +52,6 @@ info:
 	$(PERL) -v
 	@echo
 	$(CHORDPRO) --version
-	@echo
-	cat /opt/homebrew/opt/perl/lib/perl5/site_perl/5.36/ChordPro/res/config/chordpro.json
 	@echo
 	$(CHORDPRO) --help
 	@echo
@@ -71,8 +69,8 @@ pdf:
 	./run.zsh
 
 view:
-	# open *.pdf
-	open *-C_.chordpro.pdf
+	open *.pdf
+	# open *-C_.chordpro.pdf
 
 zip:
 	grm -fv chordpro.zip
@@ -84,3 +82,11 @@ share:
 	gcp -v $$T '/Users/darren/Library/Mobile Documents/com~apple~CloudDocs/euw9o3/'; \
 	sudo zsh /usr/local/bin/tgbot.zsh $$T; \
 	grm -v $$T
+
+list:
+	ggrep --color=auto -nri title *.cho
+
+status:
+	@echo
+	@gtr -s ' ' <status.txt | gcolumn -L -s\| -o\| -t | gtail -n+1
+	@echo

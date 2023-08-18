@@ -1,19 +1,25 @@
-#!/bin/zsh -x
+#!/bin/zsh
 
 # cpo_transpose_one_key $1=ID $2=KEY $3=SEMITONE
 cpo_transpose_one_key() {
+
+  # command line options
+  # https://metacpan.org/pod/App::Music::ChordPro
+  # https://www.chordpro.org/chordpro/using-chordpro/
+  
   CPO_CMD=(
     /opt/homebrew/opt/perl/bin/chordpro
     --config=conf.prp
-    --config=$1.prp
+    # --config=$1.prp
     --diagrams=none
     -x $3
-    -o $1-$2.chordpro.pdf
+    # -o $1-$2.chordpro.pdf
+    -o test.chordpro.pdf
     $1.cho
   )
-  # if [ -e $1.prp ]; then
-  #   CPO_CMD+=(--config=$1.prp)
-  # fi
+  if [ -e $1.prp ]; then
+    CPO_CMD+=(--config=$1.prp)
+  fi
   ${CPO_CMD[@]}
 }
 
@@ -45,7 +51,9 @@ cpo_ckey_all_songs() {
   done
 }
 
+# cpo_ckey_all_songs
+
 # cpo_ckey_one_song 715720012
 # cpo_ckey_one_song 1443158231
-
-cpo_ckey_all_songs
+# cpo_ckey_one_song 1440837672
+cpo_ckey_one_song 1175720998
