@@ -1,25 +1,26 @@
 
-|    |            |        |        |         |                                  |
-|    |            |        |        |         |                                  |
-|    |            |        |        |         |                                  |
-|    |            |        |        |         |                                  | Sat 19 Aug 2023 Concert
-|    |            |        |        |         |                                  |
-|    |            |        |        |         |                                  |
-|    |            |        |        |         |                                  | "AM": Apple Music https://music.apple.com/us/song/1019249219
-|    |            |        |        |         |                                  | "MPT": Our Team 
-|    |            |        |        |         |                                  |
-| NN | AM.ID      | AM.BPM | AM.KEY | MPT.KEY | TITLE                            |
-| -- |            |        |        |         |                                  |
-| 01 | 1566041338 |        |        | D       | House Of The Lord                | [*]
-| 02 | 993160497  |        |        | G       | Trading My Sorrows               | [*]
-| 03 | 655662082  |        |        | E       | You Are Good                     | [*]
-|    |            |        |        |         |                                  |
-| 04 | 1175720998 |        |        | D       | Way Maker                        |
-| 05 | 715720012  |        |        | A       | Worthy Is the Lamb               |
-| 06 | 1019249219 |        |        | A       | There Is None Like You           | [*]
-|    |            |        |        |         |                                  |
-| 07 | 1443158231 |        |        | A       | Amazing Grace My Chains Are Gone |
-| 08 | 1440837672 |        |        | A       | Good Good Father                 |
-| 09 | 1502316160 |        |        | B       | The Blessing                     | [*]
-|    |            |        |        |         |                                  |
-| XX |            |        |        | G       | Do It Again                      |
+|    |            |         |        |         |                                  |
+|    |            |         |        |         |                                  |
+|    |            |         |        |         |                                  |
+|    |            |         |        |         |                                  | Sat 19 Aug 2023 Concert
+|    |            |         |        |         |                                  |
+|    |            |         |        |         |                                  |
+|    |            |         |        |         |                                  | "AM": Apple Music https://music.apple.com/us/song/1019249219
+|    |            |         |        |         |                                  | "MPT": Our Team 
+|    |            |         |        |         |                                  |
+| NN | AM.ID      | AM.BPM  | AM.KEY | MPT.KEY | TITLE                            |
+| -- |            |         |        |         |                                  |
+| 01 | 1566041338 | 172     | Bb     | D (+4)  | House Of The Lord                | [*]
+| 02 | 993160497  | 122     | A      | G       | Trading My Sorrows               | [*]
+| 03 | 655662082  | 130     | E      | E       | You Are Good                     | [*]
+|    |            |         |        |         |                                  |
+| 04 | 1175720998 | 120     | B      | D       | Way Maker                        |
+| 05 | 715720012  | 156     | G      | A       | Worthy Is the Lamb               |
+| 06 | 1019249219 | 136     | G      | A (+2)  | There Is None Like You           | [*]
+|    |            |         |        |         |                                  |
+| 07 | 1443158231 | 128     | G      | A (+2)  | Amazing Grace My Chains Are Gone |
+| 08 | 1440837672 | 100 6/8 | A      | A       | Good Good Father                 |
+| 09 | 1502316160 | 142     | B      | B       | The Blessing                     | [*]
+|    |            |         |        |         |                                  |
+| XX |            |         |        | G       | Do It Again                      |
+|    |            |         |        |         |                                  |
