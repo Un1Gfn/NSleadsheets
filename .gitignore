@@ -11,16 +11,19 @@ tgbot.chatid
 
 /latex.old/*.pdf
 
-# /*.tmp
-
 /media
+
 /*.zip
 
-/out/*
-!/out/.gitkeep
-!/out/everything
-/out/everything/*
-!/out/everything/.gitkeep
+/tmpd.*/*
+
+!/tmpd.audio/.gitkeep
+
+# /tmpd.sheets/*
+!/tmpd.sheets/.gitkeep
+!/tmpd.sheets/everything
+/tmpd.sheets/everything/*
+!/tmpd.sheets/everything/.gitkeep
 
 /symlink_*
 

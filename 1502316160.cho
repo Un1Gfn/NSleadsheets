@@ -4,7 +4,7 @@
 {album: Graves into Gardens}
 {artist: Elevation Worship}
 
-{start_of_verse}
+{start_of_verse: Verse}
 [C] The Lord bless you
 [F] And keep you
 [C] Make His face shine u[G]pon you
@@ -18,6 +18,8 @@ And g[G]ive you p[C]eace
 A - [C]men
 A - [G]men
 {end_of_chorus}
+
+{column_break}
 
 {start_of_bridge: Bridge}
 May His [Am]favor be upon you

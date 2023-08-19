@@ -20,34 +20,72 @@ pdf {
   # https://www.prepressure.com/library/paper-size/din-a3
   papersize = a4
   # papersize = [ 842 595 ]
-  # margintop    = 40
-  # headspace    = 30
-  # marginbottom = 40
-  # footspace    = 20
-  # marginleft   = 10
-  # marginright  = 10
+
+  margintop    = 60
+  headspace    = 50
+
+  marginbottom = 30
+  footspace    = 20
+
+  marginleft   = 10
+  marginright  = 10
 
   formats {
     default {
-      footer = [ "%{title}" "%{today}" "page%{page}" ]
+      footer = [ "page %{page} of %{pages}" "%{today}" "%{title}" ]
     }
     first {
-      footer = [ "%{title}" "%{today}" "page%{page}" ]
+      footer = [ "%{title}" "%{today}" "page %{page} of %{pages}" ]
     }
     title {
       title = [ "%{tempo} bps" "%{title}" "" ]
       subtitle = [ "" "%{subtitle}" "" ]
-      footer = [ "%{title}" "%{today}" "page%{page}" ]
+      footer = [ "%{title}" "%{today}" "page %{page} of %{pages}" ]
     }
   }
 
   fonts {
-    # overriden in individual prps
-    # text.size = 3
-    # chord.size = 5
-    text.file = "/Users/darren/Library/Fonts/DejaVuSansMono.ttf"
-    chord.file = "/Users/darren/Library/Fonts/MuseJazzText.otf"
+
+    chord {
+      file = "/Users/darren/Library/Fonts/MuseJazzText.otf"
+    }
+    # chord.frame = True
+    
+    text {
+      file = "/Users/darren/Library/Fonts/DejaVuSansMono.ttf"
+      # size = 12
+      # color = "#AAA"
+    }
+    # label {
+    #   name = "Times-Roman"
+    #   size = 12
+    #   color = black
+    # }
+    # subtitle {
+    #   name = "Times-Roman"
+    #   size = 12
+    #   color = black
+    # }
+    # empty {
+    #   name = "Times-Roman"
+    #   size = 12
+    #   color = black
+    # }
+  
+    # text
+    # label
+    # subtitle
+    # empty
+  
   }
+
+  # 1443158231.prp
+  # pdf.fonts.chord.size = 13
+  # pdf.fonts.text.size = 9
+
+  # 715720012.prp
+  # pdf.fonts.chord.size = 14
+  # pdf.fonts.text.size = 12
 
   # for i in 0.3 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.5 1.7 2.0 2.5 3.0; do echo -n $i\ ; bc <<<"scale=7; $i*1.618"; done
   # 0.3 0.4854
@@ -66,9 +104,9 @@ pdf {
   # 2.5 4.0450
   # 3.0 4.8540
   spacing {
-    chords = 1.618
+    chords = 1.6180
     lyrics = 1.618
-    empty  = 3.236
+    empty  = 2.7506
   }
 
 }

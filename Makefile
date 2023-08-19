@@ -34,18 +34,24 @@
 # 2023-08-17
 # https://www.jrchord.com/worthy-is-the-lamb-hillsong
 
+ZIP:=/opt/homebrew/opt/zip/bin/zip
 CHORDII:=/opt/homebrew/bin/chordii
 CHORDPRO:=/opt/homebrew/opt/perl/bin/chordpro
 PERL:=/opt/homebrew/opt/perl/bin/perl
 MAKEFLAGS:=-j1
 
+# if set to 1, generate favorite transpose only
+MK_CPO_SUPPRESS_EVERYTHING:=0
+
+# if set to 1, disable incremental builds
+MK_CPO_NO_INCREMENTAL:=1
+
 default:
 	$(MAKE) clean
-	sleep 1
-	$(MAKE) entr
-	# $(MAKE) pdf
-	# $(MAKE) zip
-	# $(MAKE) view
+	$(MAKE) pdf
+	$(MAKE) merge
+	$(MAKE) zip.sheets
+	$(MAKE) zip.audio
 
 info:
 	@echo
@@ -59,34 +65,52 @@ info:
 	@echo
 
 clean:
-	grm -fv out/everything/*.pdf out/*.pdf
+	@grm -f \
+		NSleadsheets-Audio.zip \
+		NSleadsheets-Sheets.zip \
+		tmpd.sheets/everything/*.pdf \
+		tmpd.sheets/*.pdf \
+		tmpd.audio/*.m4a
+	@echo clean complete
+	@gfind tmpd.* | gsort
 
-a2crd:
-	@echo
-	@$(CHORDPRO) --a2crd tmp.txt
-	@echo
+# a2crd:
+# 	@echo
+# 	@$(CHORDPRO) --a2crd tmp.txt
+# 	@echo
 
-loop:
-	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
+# loop:
+# 	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
 
-entr:
-	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) pdf'
+# entr:
+# 	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) pdf'
 
 pdf:
 	@echo
-	@./run.zsh
+	@env CPO_OUT=tmpd.sheets CPO_SUPPRESS_EVERYTHING=$(MK_CPO_SUPPRESS_EVERYTHING) CPO_NO_INCREMENTAL=$(MK_CPO_NO_INCREMENTAL) ./script_chordpro.zsh
 	@echo
 
 view:
-	open out/*.pdf
+	# cd tmpd.sheets/; for i in *.pdf; do open "$$i"; sleep 0.1618; done
+	cd tmpd.sheets/; open merge*
 
-# zip:
-# 	grm -fv chordpro.zip
-# 	zip -0 -X chordpro.zip *.chordpro.pdf
+merge:
+	cd tmpd.sheets/; qpdf --empty --pages ??-*.pdf -- merge.pdf
+	cd tmpd.sheets/; pdfjam --paper a3paper --landscape --nup 2x1 merge.pdf -o merge-pdfjam.pdf
 
+zip.sheets:
+	$(ZIP)    -X -r NSleadsheets-Sheets.zip tmpd.sheets/
+
+zip.audio:
+	./script_mksymlnk.zsh
+	$(ZIP) -0 -X -r NSleadsheets-Audio.zip tmpd.audio/
+
+# NSleadsheets-Audio.zip is static
+# NSleadsheets-Audio.zip should be shared manually
+# NSleadsheets-Sheets.zip should be shared by this recipe
 share:
-	T=/tmp/chordpro-$$(gdate +%s).zip; \
-	gcp -v chordpro.zip $$T; \
+	T=/tmp/NSleadsheets-Sheets-$$(gdate +%s).zip; \
+	gcp -v NSleadsheets-Sheets.zip $$T; \
 	gcp -v $$T '/Users/darren/Library/Mobile Documents/com~apple~CloudDocs/euw9o3/'; \
 	sudo zsh /usr/local/bin/tgbot.zsh $$T; \
 	grm -v $$T

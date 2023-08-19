@@ -4,7 +4,7 @@
 {album: Freedom}
 {artist: Darrell Evans}
 
-{start_of_verse}
+{start_of_verse: Verse}
 [C] I'm [F]Trading my [Am] sor-ro[G]ws 
 [C] I'm [F]trading my [Am] sha[G/B]me
 [C] I'm [F]laying them d[Am]own f[G]or the joy of the lo[C]rd [F] [Am] [G]
@@ -19,7 +19,7 @@ Y[C]es Lor[F]d Yes Lord [Am]Yes Ye[G/B]s Lord
 Y[C]es Lor[F]d Yes Lord [Am]Yes Ye[G]s Lord A-m[C]en [F] [Am] [G]
 {end_of_chorus}
 
-{start_of_bridge}
+{start_of_bridge: Bridge}
 I am pr[C]essed but n[F]ot crushed perse-c[Am]uted not a[G]bandoned
 [C] Struck d[F]own but not de-st[Am]royed [G]
 I am ble[C]ssed beyond t[F]he curse for his pr[Am]omise will en[G]dure 

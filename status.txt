@@ -9,17 +9,18 @@
 |    |            |         |        |         |                                  | "MPT": Our Team 
 |    |            |         |        |         |                                  |
 | NN | AM.ID      | AM.BPM  | AM.KEY | MPT.KEY | TITLE                            |
-| -- |            |         |        |         |                                  |
+|    |            |         |        |         |                                  |
 | 01 | 1566041338 | 172     | Bb     | D (+4)  | House Of The Lord                |
 | 02 | 993160497  | 122     | A      | G       | Trading My Sorrows               |
 | 03 | 655662082  | 130     | E      | E       | You Are Good                     |
 |    |            |         |        |         |                                  |
-| 04 | 1175720998 | 120     | B      | D       | Way Maker                        |
-| 05 | 715720012  | 156     | G      | A       | Worthy Is the Lamb               |
+| 04 | 715720012  | 156     | G      | A       | Worthy Is the Lamb               |
+| 05 | 1175720998 | 120     | B      | D       | Way Maker                        |
 | 06 | 1019249219 | 136     | G      | A (+2)  | There Is None Like You           | 
 |    |            |         |        |         |                                  |
-| 07 | 1443158231 | 128     | G      | A (+2)  | Amazing Grace My Chains Are Gone |
-| 08 | 1440837672 | 100_6/8 | A      | A       | Good Good Father                 |
+| 07 | 1440837672 | 100_6/8 | A      | A       | Good Good Father                 |
+| 08 | 1443158231 | 128     | G      | A (+2)  | Amazing Grace My Chains Are Gone |
+|    |            |         |        |         |                                  |
 | 09 | 1502316160 | 142     | B      | B       | The Blessing                     |
 |    |            |         |        |         |                                  |
 | XX | 1192789624 | 172     | Bb     | G  (-3) | Do It Again                      |
