@@ -1,5 +1,4 @@
 
-
 .DS_Store
 
 # /latex.old/tgbot.chatid symlinked to "../tgbot.chatid"
@@ -20,6 +19,6 @@ tgbot.chatid
 /out/*
 !/out/.gitkeep
 
-/link_to_default_chordpro_json
+/link_to_*
 
 /*.m4a

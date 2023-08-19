@@ -60,7 +60,9 @@ clean:
 	grm -fv out/*
 
 a2crd:
-	$(CHORDPRO) --a2crd tmp.txt
+	@echo
+	@$(CHORDPRO) --a2crd tmp.txt
+	@echo
 
 entr:
 	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) clean; $(MAKE) pdf'
@@ -71,8 +73,7 @@ pdf:
 	@echo
 
 view:
-	open *.pdf
-	# open *-C_.chordpro.pdf
+	open out/*.pdf
 
 # zip:
 # 	grm -fv chordpro.zip

@@ -11,7 +11,7 @@
 dates.today.format = "%a %e %b %Y %T %Z"
 
 # override!
-# settings.columns = 2
+settings.columns = 1
 
 pdf {
 
