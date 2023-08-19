@@ -41,7 +41,9 @@ MAKEFLAGS:=-j1
 
 default:
 	$(MAKE) clean
-	$(MAKE) pdf
+	sleep 1
+	$(MAKE) entr
+	# $(MAKE) pdf
 	# $(MAKE) zip
 	# $(MAKE) view
 
@@ -57,15 +59,18 @@ info:
 	@echo
 
 clean:
-	grm -fv out/*
+	grm -fv out/everything/*.pdf out/*.pdf
 
 a2crd:
 	@echo
 	@$(CHORDPRO) --a2crd tmp.txt
 	@echo
 
+loop:
+	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
+
 entr:
-	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) clean; $(MAKE) pdf'
+	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) pdf'
 
 pdf:
 	@echo

@@ -18,7 +18,10 @@ tgbot.chatid
 
 /out/*
 !/out/.gitkeep
+!/out/everything
+/out/everything/*
+!/out/everything/.gitkeep
 
-/link_to_*
+/symlink_*
 
 /*.m4a

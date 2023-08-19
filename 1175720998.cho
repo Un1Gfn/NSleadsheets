@@ -1,12 +1,11 @@
 {new_song}
-{title: Way Maker}
+{title}
 {subtitle: https://pnwchords.com/way-maker-leeland-sinach/}
 {album: Way Maker Live}
 {artist: Sinach}
-{tempo: 999}
 
 {start_of_verse: Intro}
-|| [F]. | [C]. | [G]. | [Am]. ||  
+[F]___ [C]___ [G]___ [Am]___
 {end_of_verse}
 
 {start_of_verse: Verse 1}
@@ -17,7 +16,7 @@ I worship Y[G]ou, I worship Y[Am]ou
 {end_of_verse}
 
 {start_of_chorus}
-(You are) [F]Way Maker, Miracle Worker
+(You are) [F] Way Maker, Miracle Worker
 [C]Promise Keeper
 Light in the darkn[G]ess, my God
 That is who You [Am]are 
@@ -44,7 +43,7 @@ That is who You a[G]re
 That is who You [Am]are
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: Bridge}
 [F] Even when I don't see it, You're working
 [C] Even when I don't feel it, You're working
 [G] You never stop, You never stop working

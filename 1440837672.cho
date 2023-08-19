@@ -1,12 +1,11 @@
 {new_song}
-{title: Good Good Father}
+{title}
 {subtitle: https://www.worshiptogether.com/songs/good-good-father-chris-tomlin/}
 {album: Never Lose Sight}
 {artist: Chris Tomlin}
-{tempo: 999}
 
 {start_of_verse: Intro}
-| [C]. . | [Csus]. [C]. | | [Csus]. [C]. | 
+| [C]___ [C]___ | [Csus]___ [C]___ | [C]___ [C]___ | [Csus]___ [C]___ | 
 {end_of_verse}
 
 {start_of_verse: Verse 1}
@@ -35,7 +34,7 @@ Because You [F2]know just [C/E]what we need
 Before [Dm7]we say a [Gadd4]word
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: Bridge}
 Because You are [F2]perfect 
 In all of Your [Am7]ways
 You are [Dm7]perfect in all of Your [C]ways
@@ -48,13 +47,13 @@ Oh this [C]Love so [Csus]undeni[C]able
 I, I can [Csus]hardly [C]speak
 Peace so [Csus]unex[C]plainable
 I, I can [Csus]hardly [C]think
-As You [F2]call me, [C/E]deeper still
+As You [F2]call me [C/E]deeper still
 As You [Dm7]call me [C/E]deeper still 
 As You [F2]call me [C/E]deeper still
 Into [Dm7]love, love, [Gadd4]love
 {end_of_verse}
 
 {start_of_verse: Outro}
-You are [F2]perfect in all of Your [C]ways [Dm7]          
-[G]You are [F2]perfect in all of Your [C]ways  [Am] [G]
+You are [F2]perfect in all of Your [C]ways [Dm7]
+[G]You are [F2]perfect in all of Your [C]ways [Am] [G]
 {end_of_verse}

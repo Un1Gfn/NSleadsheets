@@ -1,5 +1,5 @@
 {new_song}
-{title: Do It Again}
+{title}
 {subtitle: https://pnwchords.com/do-it-again-elevation-worship/}
 {album: There Is a Cloud}
 {artist: Elevation Worship}
@@ -32,11 +32,11 @@ You've n[F]ever failed me ye[C]t
 {end_of_verse}
 
 {start_of_verse: Instrumental}
-[C][C][F][F][C][C][F][F]
-[G][G][C][C][G][G][C][C]
+| [C]___ [C]___ [F]___ [F]___ | [C]___ [C]___ [F]___ [F]___ |
+| [G]___ [G]___ [C]___ [C]___ | [G]___ [G]___ [C]___ [C]___ |
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: Bridge}
 [F]I've seen You mov[C]e
 [F]You move the moun[G]tains
 [C]And I believe[G]

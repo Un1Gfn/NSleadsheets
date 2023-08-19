@@ -1,11 +1,11 @@
 {new_song}
-{title: There Is None Like You}
+{title}
 {subtitle: https://worshipheaven.com/EN/chord/T002_There%20is%20none%20like%20you.html}
 {album: Pure Heart}
 {artist: Lenny LeBlanc}
 
 {start_of_verse: Intro}
-| [C]. [G]. [Am]. [G]. |
+[C]___ [G]___ [Am]___ [G]___
 {end_of_verse}
 
 {start_of_chorus: Chorus 1}
@@ -16,7 +16,7 @@
 {end_of_chorus}
 
 {start_of_verse: Break}
-[C][G][Am][G]
+[C]___ [G]___ [Am]___ [G]___
 {end_of_verse}
 
 {start_of_verse: Verse 1}

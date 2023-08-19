@@ -11,7 +11,7 @@
 dates.today.format = "%a %e %b %Y %T %Z"
 
 # override!
-settings.columns = 1
+# settings.columns = 1
 
 pdf {
 
@@ -31,9 +31,13 @@ pdf {
     default {
       footer = [ "%{title}" "%{today}" "page%{page}" ]
     }
+    first {
+      footer = [ "%{title}" "%{today}" "page%{page}" ]
+    }
     title {
       title = [ "%{tempo} bps" "%{title}" "" ]
       subtitle = [ "" "%{subtitle}" "" ]
+      footer = [ "%{title}" "%{today}" "page%{page}" ]
     }
   }
 
@@ -41,7 +45,7 @@ pdf {
     # overriden in individual prps
     # text.size = 3
     # chord.size = 5
-    text.file = "/Users/darren/Library/Fonts/DejaVuSans.ttf"
+    text.file = "/Users/darren/Library/Fonts/DejaVuSansMono.ttf"
     chord.file = "/Users/darren/Library/Fonts/MuseJazzText.otf"
   }
 

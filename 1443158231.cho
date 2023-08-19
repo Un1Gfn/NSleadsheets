@@ -1,9 +1,8 @@
 {new_song}
-{title: Amazing Grace My Chains Are Gone}
+{title}
 {subtitle: https://www.worshiptogether.com/songs/amazing-grace-my-chains-are-gone/}
 {album: See the Morning}
 {artist: Chris Tomlin}
-{columns: 3}
 
 {start_of_verse: Verse 1}
 [C]Amazing Grace, how [F/C]sweet the [C]sound
@@ -19,16 +18,12 @@ How [C]precious [C/E]did that [F]Grace [C]appear
 The hour I [G/C]first be[C]lieved
 {end_of_verse}
 
-{column_break}
-
 {start_of_chorus}
 My [C/E]chains are [F]gone, I've been set [C/E]free
 My God, my [F/A]Savior has ransomed [C/G]me
 And [C/E]like a [F]flood His mercy [C/E]rains
 Unending [Dm7]love,[G7] Amazing [C]Grace
 {end_of_chorus}
-
-{column_break}
 
 {start_of_verse: Verse 3}
 [C]The Lord has promised [F/C]good to [C]me
