@@ -41,20 +41,23 @@ cpo_reldb_init() {
   # _ is NATUAL
   # b is FLAT
 
-  cpo_reldb_append 1566041338       "172" "D_" "House Of The Lord"
-  cpo_reldb_append 993160497        "122" "G_" "Trading My Sorrows"
-  cpo_reldb_append 655662082        "130" "E_" "You Are Good"
+  # cpo_reldb_append 1566041338       "172" "D_" "House Of The Lord"
+  # cpo_reldb_append 993160497        "122" "G_" "Trading My Sorrows"
+  # cpo_reldb_append 655662082        "130" "E_" "You Are Good"
+  # cpo_reldb_append 715720012        "156" "A_" "Worthy Is the Lamb"
+  # cpo_reldb_append 1175720998       "120" "C_" "Way Maker"
+  # cpo_reldb_append 1019249219       "136" "A_" "There Is None Like You"
+  # cpo_reldb_append 1440837672 "(6/8) 100" "A_" "Good Good Father"
+  # cpo_reldb_append 1443158231       "128" "E_" "Amazing Grace My Chains Are Gone"
+  # cpo_reldb_append 1502316160       "142" "B_" "The Blessing"
+  # cpo_reldb_append 1192789624       "172" "G_" "Do It Again"
 
-  cpo_reldb_append 715720012        "156" "A_" "Worthy Is the Lamb"
-  cpo_reldb_append 1175720998       "120" "C_" "Way Maker"
-  cpo_reldb_append 1019249219       "136" "A_" "There Is None Like You"
+  # cpo_reldb_append 2574411984       "100" "F_" "What a Friend We Have in Jesus"
 
-  cpo_reldb_append 1440837672 "(6/8) 100" "A_" "Good Good Father"
-  cpo_reldb_append 1443158231       "128" "E_" "Amazing Grace My Chains Are Gone"
-
-  cpo_reldb_append 1502316160       "142" "B_" "The Blessing"
-
-  cpo_reldb_append 1192789624       "172" "G_" "Do It Again"
+  cpo_reldb_append 1639032653       "999" "E_" "Arise"
+  cpo_reldb_append 724575185        "999" "B_" "Blessed Be Your Name"
+  cpo_reldb_append 1457082236       "999" "E_" "Sing for Joy"
+  cpo_reldb_append 646708668        "999" "G_" "Lord I Lift Your Name On High"
 
 }
 

@@ -6,7 +6,13 @@ cpo_reldb_print
 
 cd tmpd.audio
 
-for k in ${CPO_RELDB_KEYS[@]}; do
-  TC=${CPO_RELDB_FIELD_TITLE[$k]//" "/.}
-  ln -sv ../$k.m4a $k-$TC.m4a
+for id in ${CPO_RELDB_KEYS[@]}; do
+  TC=${CPO_RELDB_FIELD_TITLE[$id]//" "/.}
+  for ext in m4a flac; do
+    if gtest -e ../$id.$ext; then
+      gln -sv ../$id.$ext $id-$TC.$ext
+    else
+      gtrue
+    fi
+  done
 done

@@ -97,9 +97,10 @@ cpo_allkeys_allsongs_parallel() {
   cpo_reldb_dump >$CPO_RELDB_DUMPFILE
   # cat $CPO_RELDB_DUMPFILE
 
-  ls -1 *.cho \
-    | cut -f 1 -d '.' \
-    | gtime -f "\n  wall clock time - %E - %e  \n" /opt/homebrew/opt/parallel/bin/parallel -I{} \
+  # ls -1 *.cho | cut -f 1 -d '.'
+  printf "%s\n" $CPO_RELDB_KEYS[@] \
+    | gtime -f "\n  wall clock time - %E - %e  \n" \
+    /opt/homebrew/opt/parallel/bin/parallel -I{} \
     -- zsh -c ":; source $CPO_RELDB_DUMPFILE; eval $F1; eval $F2; eval $F3; cpo_allkeys_onesong {}"
 
   grm -fv $CPO_RELDB_DUMPFILE

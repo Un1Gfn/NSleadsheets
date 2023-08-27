@@ -65,19 +65,21 @@ info:
 	@echo
 
 clean:
-	@grm -f \
+	@grm -fv \
 		NSleadsheets-Audio.zip \
-		NSleadsheets-Sheets.zip \
+		NSleadsheets-Sheets.zip
+	@grm -f \
 		tmpd.sheets/everything/*.pdf \
 		tmpd.sheets/*.pdf \
-		tmpd.audio/*.m4a
+		tmpd.audio/*.m4a \
+		tmpd.audio/*.flac
 	@echo clean complete
 	@gfind tmpd.* | gsort
 
-# a2crd:
-# 	@echo
-# 	@$(CHORDPRO) --a2crd tmp.txt
-# 	@echo
+a2crd:
+	@echo
+	@$(CHORDPRO) --a2crd tmp.txt
+	@echo
 
 # loop:
 # 	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
@@ -99,7 +101,8 @@ merge:
 	cd tmpd.sheets/; pdfjam --paper a3paper --landscape --nup 2x1 merge.pdf -o merge-pdfjam.pdf
 
 zip.sheets:
-	$(ZIP)    -X -r NSleadsheets-Sheets.zip tmpd.sheets/
+	$(ZIP) -9 -X -r NSleadsheets-Sheets.zip tmpd.sheets/
+	# gfind tmpd.sheets/ | gsort | $(ZIP) -o -9 -X -r -@ NSleadsheets-Sheets.zip
 
 zip.audio:
 	./script_mksymlnk.zsh
@@ -114,6 +117,16 @@ share:
 	gcp -v $$T '/Users/darren/Library/Mobile Documents/com~apple~CloudDocs/euw9o3/'; \
 	sudo zsh /usr/local/bin/tgbot.zsh $$T; \
 	grm -v $$T
+
+adb:
+	@echo
+	adb devices
+	adb shell uname -a
+	@echo
+	@sleep 1
+	-adb push NSleadsheets-Sheets.zip /sdcard/Download/Telegram/NSleadsheets-Sheets-$(shell gdate +%s).zip
+	@echo
+	-adb push NSleadsheets-Audio.zip  /sdcard/Download/Telegram/NSleadsheets-Audio-$(shell gdate +%s).zip
 
 list:
 	ggrep --color=auto -nri -e subtitle -e title *.cho
