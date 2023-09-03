@@ -84,8 +84,8 @@ a2crd:
 # loop:
 # 	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
 
-# entr:
-# 	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) pdf'
+entr:
+	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) clean pdf'
 
 pdf:
 	@echo
