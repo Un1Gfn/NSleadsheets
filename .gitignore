@@ -29,3 +29,5 @@ tgbot.chatid
 
 /*.m4a
 /*.flac
+
+/tmp.*

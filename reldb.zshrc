@@ -54,9 +54,9 @@ cpo_reldb_init() {
 
   # cpo_reldb_append 2574411984       "100" "F_" "What a Friend We Have in Jesus"
 
-  cpo_reldb_append 1639032653       "999" "E_" "Arise"
+  # cpo_reldb_append 1639032653       "999" "E_" "Arise"
   # cpo_reldb_append 724575185        "999" "B_" "Blessed Be Your Name"
-  # cpo_reldb_append 1457082236       "999" "E_" "Sing for Joy"
+  cpo_reldb_append 1457082236       "999" "E_" "Sing for Joy"
   # cpo_reldb_append 646708668        "999" "G_" "Lord I Lift Your Name On High"
 
 }

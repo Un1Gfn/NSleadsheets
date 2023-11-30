@@ -1,5 +1,6 @@
 #!/bin/zsh -e
 
+source /usr/local/share/homebrew/compat.zshrc
 source reldb.zshrc
 
 cpo_reldb_print
@@ -10,9 +11,9 @@ for id in ${CPO_RELDB_KEYS[@]}; do
   TC=${CPO_RELDB_FIELD_TITLE[$id]//" "/.}
   for ext in m4a flac; do
     if gtest -e ../$id.$ext; then
-      gln -sv ../$id.$ext $id-$TC.$ext
+      ln -sv ../$id.$ext $id-$TC.$ext
     else
-      gtrue
+      true
     fi
   done
 done

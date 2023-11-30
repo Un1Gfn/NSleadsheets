@@ -1,41 +1,41 @@
-{new_song}
+# gchordpro 1639032653.cho --diagrams=none -x -7 -o /tmp/t.cho
 {title}
 {subtitle: https://worshipchords.com/arise-chords/}
 {album: Unknown}
 {artist: Don Moen}
 
 {start_of_verse: Intro}
-[E]____ [B]____ [E]____
+[C]____ [G]____ [C]____
 {end_of_verse}
 
 {start_of_verse: Verse}
-[E] One thing we [B]ask of You,[D6] one thing that [A2]we desire
-[E] That as we [B]worship You,[D6] Lord, come and [A2]change our lives
-Aris[E]e, ari[B]se[E], aris[E]e, ari[A]se[E]
+[C] One thing we [G]ask of You,[Bb6] one thing that [F2]we desire
+[C] That as we [G]worship You,[Bb6] Lord, come and [F2]change our lives
+Aris[C]e, ari[G]se[C], aris[C]e, ari[F]se[C]
 {end_of_verse}
 
 {start_of_chorus: Chorus 1}
-Aris[E]e, take Your [B]place, be en[C#m7]throned on our [A2]praise
-Aris[E]e, King of [B]kings, Holy [C#m7]God, as we [A2]sing
-Ar[E] - is[B]e,[C#m7] [B/D#]ar [C#m7] - i[A2]se Arise, ar - ise
-Ar[E] - is[B]e,[C#m7] [B/D#]ar [C#m7] - i[A2]se Arise, arise
+Aris[C]e, take Your [G]place, be en[Am7]throned on our [F2]praise
+Aris[C]e, King of [G]kings, Holy [Am7]God, as we [F2]sing
+Ar[C] - is[G]e,[Am7] [G/B]ar [Am7] - i[F2]se Arise, ar - ise
+Ar[C] - is[G]e,[Am7] [G/B]ar [Am7] - i[F2]se Arise, arise
 {end_of_chorus}
 
 {start_of_verse: Interlude}
-[E]____ [D]____ [E]____ [A]____ [E]____
+[C]____ [Bb]____ [C]____ [F]____ [C]____
 {end_of_verse}
 
 {start_of_bridge: Bridge}
-[E]We lift You up, we lift You up, we lift You up on our [D/F#]praise[A2]s
+[C]We lift You up, we lift You up, we lift You up on our [Bb/D]praise[F2]s
 {end_of_bridge}
 
 {start_of_chorus: Chorus 2}
-Aris[F]e, take Your plac[C]e, be en[Dm7]throned [Dm] on our [Bb2]praise
-Aris[F]e, King of [C]kings, Holy [Dm7]God, as we [Bb2]sing
-Aris[F]e, [C] [Dm7] [C/E] [Dm7] [Bb2] Arise, arise
-Ar[F] - is[C]e,[Dm7] [C/E]ar [Dm7] - [Bb2]ise Arise, arise
+Aris[Db]e, take Your plac[Ab]e, be en[Bbm7]throned [Bbm] on our [Gb2]praise
+Aris[Db]e, King of [Ab]kings, Holy [Bbm7]God, as we [Gb2]sing
+Aris[Db]e, [Ab] [Bbm7] [Ab/C] [Bbm7] [Gb2] Arise, arise
+Ar[Db] - is[Ab]e,[Bbm7] [Ab/C]ar [Bbm7] - [Gb2]ise Arise, arise
 {end_of_chorus}
 
 {start_of_verse: Ending}
-A[F]r -[Ab] is[F]e, a[Bb]r [F] [C] [F] -[Db/F] [Eb] is[F]e, aris[F]e
+A[Db]r -[E] is[Db]e, a[Gb]r [Db] [Ab] [Db] -[A/Db] [B] is[Db]e, aris[Db]e
 {end_of_verse}

@@ -10,7 +10,7 @@
 
 # chordpro.install.wx.err
 # brew install wxWidgets
-# add 'adv'=>... to the following file before 
+# add 'adv'=>... to the following file before
 # /opt/homebrew/Cellar/perl/5.36.1/lib/perl5/site_perl/5.36/darwin-thread-multi-2level/Alien/wxWidgets/Config/mac_3_2_2_uni_nc_0.pm
 # # https://www.nntp.perl.org/group/perl.wxperl.users/2012/06/msg8477.html
 # cpan -i Alien:Wx
@@ -34,10 +34,11 @@
 # 2023-08-17
 # https://www.jrchord.com/worthy-is-the-lamb-hillsong
 
-ZIP:=/opt/homebrew/opt/zip/bin/zip
-CHORDII:=/opt/homebrew/bin/chordii
-CHORDPRO:=/opt/homebrew/opt/perl/bin/chordpro
-PERL:=/opt/homebrew/opt/perl/bin/perl
+ifeq ($(shell uname -s),Darwin)
+  $(info loading homebrew compat $$PATH ...)
+  include /usr/local/share/make/compat.mk
+endif
+
 MAKEFLAGS:=-j1
 
 # if set to 1, generate favorite transpose only
@@ -49,43 +50,44 @@ MK_CPO_NO_INCREMENTAL:=1
 default:
 	$(MAKE) clean
 	$(MAKE) pdf
-	$(MAKE) merge
-	$(MAKE) zip.sheets
-	$(MAKE) zip.audio
+	# $(MAKE) merge
+	# $(MAKE) zip.sheets
+	# $(MAKE) zip.audio
 
 info:
 	@echo
-	$(CHORDII) -V
+	chordii -V
 	@echo
-	$(PERL) -v
+	perl -v
 	@echo
-	$(CHORDPRO) --version
+	chordpro --version
 	@echo
-	$(CHORDPRO) --help
+	chordpro --help
 	@echo
 
 clean:
-	@grm -fv \
+	@rm -fv \
 		NSleadsheets-Audio.zip \
 		NSleadsheets-Sheets.zip
-	@grm -f \
+	@rm -f \
 		tmpd.sheets/everything/*.pdf \
 		tmpd.sheets/*.pdf \
 		tmpd.audio/*.m4a \
 		tmpd.audio/*.flac
 	@echo clean complete
-	@gfind tmpd.* | gsort
+	@find tmpd.* | gsort
 
+# @chordpro --a2crd tmp.in >tmp.out
 a2crd:
 	@echo
-	@$(CHORDPRO) --a2crd tmp.txt
+	@cat >/tmp/h3yof4.txt; clear; echo; echo; chordpro --a2crd /tmp/h3yof4.txt; echo; rm -f /tmp/h3yof4.txt
 	@echo
 
 # loop:
 # 	while true; do clear; printf \\e\[3J; $(MAKE) pdf; done
 
 entr:
-	gls -A1 *.cho *.prp | entr sh -c 'clear; printf \\e\[3J; $(MAKE) clean pdf'
+	ls -A1 *.cho *.prp | entr sh -c ':; printf \\e\[3J; $(MAKE) clean pdf'
 
 pdf:
 	@echo
@@ -101,22 +103,22 @@ merge:
 	cd tmpd.sheets/; pdfjam --paper a3paper --landscape --nup 2x1 merge.pdf -o merge-pdfjam.pdf
 
 zip.sheets:
-	$(ZIP) -9 -X -r NSleadsheets-Sheets.zip tmpd.sheets/
-	# gfind tmpd.sheets/ | gsort | $(ZIP) -o -9 -X -r -@ NSleadsheets-Sheets.zip
+	zip -9 -X -r NSleadsheets-Sheets.zip tmpd.sheets/
+	# find tmpd.sheets/ | sort | zip -o -9 -X -r -@ NSleadsheets-Sheets.zip
 
 zip.audio:
 	./script_mksymlnk.zsh
-	$(ZIP) -0 -X -r NSleadsheets-Audio.zip tmpd.audio/
+	zip -0 -X -r NSleadsheets-Audio.zip tmpd.audio/
 
 # NSleadsheets-Audio.zip is static
 # NSleadsheets-Audio.zip should be shared manually
 # NSleadsheets-Sheets.zip should be shared by this recipe
 share:
 	T=/tmp/NSleadsheets-Sheets-$$(gdate +%s).zip; \
-	gcp -v NSleadsheets-Sheets.zip $$T; \
-	gcp -v $$T '/Users/darren/Library/Mobile Documents/com~apple~CloudDocs/euw9o3/'; \
+	cp -v NSleadsheets-Sheets.zip $$T; \
+	cp -v $$T '/Users/darren/Library/Mobile Documents/com~apple~CloudDocs/euw9o3/'; \
 	sudo zsh /usr/local/bin/tgbot.zsh $$T; \
-	grm -v $$T
+	rm -v $$T
 
 adb:
 	@echo

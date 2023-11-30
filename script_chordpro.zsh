@@ -1,5 +1,7 @@
 #!/bin/zsh -e
 
+source /usr/local/share/homebrew/compat.zshrc
+
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Array-Parameters
 
 # cpo_transpose_one_key $1=AMID $2=KEY $3=SEMITONE [$4=COPY_TO_FAVORITE_FORDER]
@@ -17,17 +19,17 @@ cpo_transpose_one_key() {
   local OUT=$CPO_OUT/everything/$INDEX-$2-$TITLE_CANONICALIZED-$1.pdf
 
   local CMD=(
-  
-    /opt/homebrew/opt/perl/bin/chordpro
+
+    chordpro
     --config=conf.prp
     # --config=$1.prp
     --diagrams=none
-  
+
     --meta title=$TITLE
     --meta tempo=$AMBPM
-  
+
     -x $3
-  
+
     -o $OUT
     # -o $CPO_OUT/test.pdf
     $1.cho
@@ -43,7 +45,7 @@ cpo_transpose_one_key() {
   fi
 
   if [[ favorite == $4 ]]; then
-    gcp -vf $OUT $CPO_OUT/
+    cp -vf $OUT $CPO_OUT/
   fi
 
 }
@@ -92,7 +94,7 @@ cpo_allkeys_allsongs_parallel() {
 
   # (bash) https://stackoverflow.com/questions/12944674/
   # (zsh) https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html#index-typeset
-  local CPO_RELDB_DUMPFILE=$(gmktemp /tmp/cpo_tmp_XXXXXXXXXX) # create temporary variable 
+  local CPO_RELDB_DUMPFILE=$(mktemp /tmp/cpo_tmp_XXXXXXXXXX) # create temporary variable
   echo $CPO_RELDB_DUMPFILE
   cpo_reldb_dump >$CPO_RELDB_DUMPFILE
   # cat $CPO_RELDB_DUMPFILE
@@ -100,10 +102,10 @@ cpo_allkeys_allsongs_parallel() {
   # ls -1 *.cho | cut -f 1 -d '.'
   printf "%s\n" $CPO_RELDB_KEYS[@] \
     | gtime -f "\n  wall clock time - %E - %e  \n" \
-    /opt/homebrew/opt/parallel/bin/parallel -I{} \
+    parallel -I{} \
     -- zsh -c ":; source $CPO_RELDB_DUMPFILE; eval $F1; eval $F2; eval $F3; cpo_allkeys_onesong {}"
 
-  grm -fv $CPO_RELDB_DUMPFILE
+  rm -fv $CPO_RELDB_DUMPFILE
 
 }
 
@@ -118,7 +120,7 @@ cpo_main() {
   # cpo_allkeys_allsongs
   cpo_allkeys_allsongs_parallel
 
-  # gfind $CPO_OUT/ | gsort
+  # find $CPO_OUT/ | sort
 
 }
 
